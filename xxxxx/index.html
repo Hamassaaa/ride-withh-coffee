@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <link rel="stylesheet" href="stayle.css">
+</head>
+
+<body>
+    <!-- /* start navbar */ -->
+    <header>
+        <div class="logo">Coffee Ride</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- /* end start navbar */ -->
+
+
+    <!-- /* start home first page */ -->
+    <div  class="hero">
+        <h1 >" Enjoy Your <br> Journey with <br> Coffee Ride "</h1>
+        <div class="herodesign">
+            <img  src="/img/DALL·E 2024-12-13 00.52.30 - A stylish coffee-themed bus, modern and sleek, with a cozy and inviting design. The bus should have a warm, inviting look, combining the colors brown,.webp" alt="">
+            <img src="/img/comf.webp" alt="">
+        </div>
+    </div>
+    <!-- /* end start home first page */ -->
+
+
+    <!-- start Bookings&Reserve -->
+    <div class="BookingsandReserve">
+         <section id="booking" class="booking">
+        <h2>book now</h2>
+        <form action="#" method="post">
+            <label for="route">directions:</label>
+            <select id="route" name="route">
+                <option value="october-to-tagamoa">from october to giza</option>
+                <option value="october-to-tagamoa">من أكتوبر إلى مصر الجديده</option>
+                <option value="october-to-tagamoa">من أكتوبر إلى المعادي</option>
+            </select>
+
+            <label for="date">date:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="seats">how many seats:</label>
+            <input type="number" id="seats" name="seats" min="1" max="10">
+
+            <button type="submit" class="btn">confirm</button>
+        </form>
+    </section>
+    <section id="seat-booking">
+    <h2>Reserve Your Seat</h2>
+
+    <div class="bus-layout">
+
+ <div class="all">
+
+<div class="right">
+        <div class="row">
+    <div>
+            <div class="seat" data-seat="2A"></div>
+            <div class="seat" data-seat="2A"></div>
+    </div>
+    <div>
+        <div class="seat" data-seat="2A"></div>
+        <div class="seat" data-seat="2A"></div>
+    </div>
+            
+        </div>
+
+        <div class="row">
+            <div>
+                    <div class="seat" data-seat="2A"></div>
+                    <div class="seat" data-seat="2A"></div>
+            </div>
+            <div>
+                <div class="seat" data-seat="2A"></div>
+                <div class="seat" data-seat="2A"></div>
+            </div>
+                    
+        </div>
+
+        <div class="row">
+            <div>
+                    <div class="seat" data-seat="2A"></div>
+                    <div class="seat" data-seat="2A"></div>
+            </div>
+            <div>
+                <div class="seat" data-seat="2A"></div>
+                <div class="seat" data-seat="2A"></div>
+            </div>
+                    
+        </div>
+    </div>
+<div class="left">
+            <div class="row">
+    <div>
+            <div class="seat" data-seat="2A"></div>
+            <div class="seat" data-seat="2A"></div>
+    </div>
+    <div>
+        <div class="seat" data-seat="2A"></div>
+        <div class="seat" data-seat="2A"></div>
+    </div>
+            
+        </div>
+
+        <div class="row">
+            <div>
+                    <div class="seat" data-seat="2A"></div>
+                    <div class="seat" data-seat="2A"></div>
+            </div>
+            <div>
+                <div class="seat" data-seat="2A"></div>
+                <div class="seat" data-seat="2A"></div>
+            </div>
+                    
+        </div>
+
+        <div class="row">
+            <div>
+                    <div class="seat" data-seat="2A"></div>
+                    <div class="seat" data-seat="2A"></div>
+            </div>
+            <div>
+                <div class="seat" data-seat="2A"></div>
+                <div class="seat" data-seat="2A"></div>
+            </div>
+                    
+        </div>
+
+ </div>
+
+    </div>
+
+    </div>
+    
+    <button id="confirm-btn">Confirm</button>
+</section>
+    </div>
+    <!-- end Bookings&Reserve -->
+
+
+<!-- start challenge -->
+ <div class="challenge">
+    <h2>Interactive Challenge</h2>
+    <div class="question">What is the capital of Egypt?</div>
+    <button onclick="checkAnswer('cairo')">Cairo</button>
+    <button onclick="checkAnswer('alexandria')">Alexandria</button>
+    <button onclick="checkAnswer('giza')">Giza</button>
+    <div id="response"></div>
+  </div>
+<!-- end start challenge -->
+
+
+<!-- start review -->
+<div class="reviews-container">
+    <h2>Customer Reviews</h2>
+
+    <!-- Review Form -->
+    <div class="review-form">
+      <input type="text" id="review-name" placeholder="Your Name" required />
+      <textarea id="review-text" placeholder="Write your review here..." rows="4" required></textarea>
+      <button onclick="submitReview()">Submit Review</button>
+    </div>
+
+    <!-- Reviews List -->
+    <div class="reviews-list" id="reviews-list">
+      <!-- Reviews will be displayed here -->
+    </div>
+  </div>
+  <!-- end start review -->
+
+  <!-- start Notification -->
+  <div class="notification-container">
+    <h2>Arrival Notification</h2>
+    <button onclick="requestNotificationPermission()">Enable Notifications</button>
+  </div>
+    <!--end start Notification -->
+    
+    <footer>
+        &copy; 2024 Coffee Ride. All Rights Reserved.
+    </footer>
+
+    <script src="/scripr.js"></script>
+</body>
+</html>
+
+    

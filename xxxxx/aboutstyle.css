@@ -1,0 +1,231 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #f4a261;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #f4a261;
+    border-bottom: 2px solid #f4a261;
+}
+
+/* Media Query للشاشات الصغيرة (أقل من 768px) */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* Media Query للشاشات المتوسطة (من 768px إلى 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 1.4em;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    nav ul li a {
+        font-size: 1.1em;
+    }
+}
+
+/* Media Query للشاشات الكبيرة (أكبر من 1200px) */
+@media (min-width: 1200px) {
+    header {
+        padding: 20px 30px;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+}
+
+/* About Section Styles */
+/* start About section */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h1 {
+    font-size: 2.5em;
+    color: #f4a261;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px rgba(222, 143, 87, 0.8); /* زيادة الظل الأسود لتوضيح النص */
+    animation-name: im;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    margin: 20px 0; /* إضافة مسافة بين الصورة والنص */
+}
+
+.about-image:hover {
+    box-shadow: 4px 4px 25px rgba(222, 143, 87, 0.8); /* زيادة الظل الأسود لتوضيح النص */
+    transform: scale(1.07);
+}
+
+@keyframes im {
+    0% {
+        box-shadow: 4px 4px 2px rgba(222, 143, 87, 0.747); /* الظل عند البداية */
+    }
+    100% {
+        box-shadow: 5px 5px 10px rgba(222, 143, 87, 0.881); /* الظل عند النهاية */
+    }
+}
+
+/* Media Queries */
+
+/* للشاشات الصغيرة (أقل من 768px) */
+@media (max-width: 767px) {
+    .about {
+        padding: 30px 10px; /* تقليل التباعد على الشاشات الصغيرة */
+        max-width: 100%; /* العرض 100% */
+    }
+
+    .about h1 {
+        font-size: 2em; /* تقليل حجم الخط */
+    }
+
+    .about p {
+        font-size: 1em; /* تقليل حجم النص */
+    }
+
+    .about-image {
+        max-width: 100%; /* عرض الصورة بالكامل */
+        margin-bottom: 20px; /* إضافة مسافة أسفل الصورة */
+    }
+}
+
+/* للشاشات المتوسطة (من 768px إلى 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .about {
+        padding: 40px 20px; /* زيادة التباعد قليلاً */
+    }
+
+    .about h1 {
+        font-size: 2.3em; /* تقليل حجم الخط قليلاً */
+    }
+
+    .about p {
+        font-size: 1.1em; /* إبقاء حجم النص كما هو */
+    }
+
+    .about-image {
+        max-width: 90%; /* تقليل العرض للصورة قليلاً */
+    }
+}
+
+/* للشاشات الكبيرة (أكبر من 1200px) */
+@media (min-width: 1200px) {
+    .about {
+        padding: 50px 20px; /* الحفاظ على التباعد الأصلي */
+    }
+
+    .about h1 {
+        font-size: 2.5em; /* الحفاظ على حجم الخط الكبير */
+    }
+
+    .about p {
+        font-size: 1.1em; /* إبقاء حجم النص كما هو */
+    }
+
+    .about-image {
+        max-width: 600px; /* الحفاظ على الحجم الأصلي للصورة */
+    }
+}
+/* end About section */
+
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #ffffff;
+    font-size: 0.9em;
+    margin-top: 50px;
+}
